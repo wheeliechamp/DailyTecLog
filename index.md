@@ -1,9 +1,14 @@
-# 日々のIT系知見ログ
+# 情報技術の知見に関する履歴
 
 ## kotkin + Android
 ## Flutter + Android
+### Flutterのインストール
+
 ## Rust + RaspberryPi
 ## 調べたこと
+### プログラミングを学べるドローン
++ https://www.robolink.com/products/codrone
++ https://www.kickstarter.com/projects/robolink/codrone-edu-the-drone-designed-for-the-classroom?lang=ja
 ## 良く忘れること
 ### git command
 + ユーザー名とメールアドレスの設定（コミット時の記録用）
