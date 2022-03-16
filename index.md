@@ -1,7 +1,11 @@
 # 情報技術の知見に関する履歴
 
 ## kotkin + Android
-## Flutter + Android
+## Flutter
+### 公式
++ https://flutter.dev/
++ https://flutter.github.io/samples/#
++ https://gallery.flutter.dev/#/
 ### Flutterのインストール
 + https://flutter.dev/ から
 + [Get started] ⇒ Install 画面で
@@ -13,14 +17,29 @@
 + Marketplaceで[Flutter]と[Dart]をインストールする 
 
 ## Rust + RaspberryPi
+
+## Eclipse
++ SVNで比較するときに文字化けする。
+  + [ウィンドウ]⇒[設定]⇒[一般]⇒[コンテンツタイプ]
+  + コンテンツタイプのいずれか選択
+  + ファイルの関連付け（不足なら追加）
+  + デフォルトエンコードを設定（UTF-8など）し、[更新]
+  + 適用して閉じる
 ## 調べたこと
-### SQL
-+ Oracle DUAL について
-  + Oracleで利用できるダミーテーブル。FROM句で使える。
-  + SELECT 'Dummy' FROM DUAL; のような利用ができる。
+## SQL
+### Oracle DUAL について
++ Oracleで利用できるダミーテーブル。FROM句で使える。
++ SELECT 'Dummy' FROM DUAL; のような利用ができる。
 + Oracle DUAL を PosgreSQL で
   + SELECT 'Dummy'; だけで良い。FROM句なくてもいけるんだ。
-### プログラミングを学べるドローン
+### PostgreSql
++ テーブルにコメント
+  + COMMENT ON TABLE t_nm IS 't_nmという名のテーブル'
++ カラムにコメント
+  + COMMENT ON COLUMN t_nm.column_nm IS 'column_nmという名のカラム'
++ 現在日付：SELECT current_date
++ 現在日時：SELECT noe()
+## プログラミングを学べるドローン
 + https://www.robolink.com/products/codrone
 + https://www.kickstarter.com/projects/robolink/codrone-edu-the-drone-designed-for-the-classroom?lang=ja
 
