@@ -25,7 +25,7 @@
   + ファイルの関連付け（不足なら追加）
   + デフォルトエンコードを設定（UTF-8など）し、[更新]
   + 適用して閉じる
-## 調べたこと
+
 ## < SQL >
 ### Oracle DUAL について
 + Oracleで利用できるダミーテーブル。FROM句で使える。
@@ -41,6 +41,7 @@
 + 現在日時：SELECT noe()
 
 ## < 気になった記事やページ >
++ [スマホをノートPC化](https://www.mirabook.info/)
 + [Python再帰呼び出し](https://atmarkit.itmedia.co.jp/ait/articles/2203/17/news011.html)
 + [ウクライナ巡るサイバー空間の攻防-ロシアの-控えめな攻撃-に驚く声も-そのワケは](https://www.msn.com/ja-jp/news/world/%E3%82%A6%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%8A%E5%B7%A1%E3%82%8B%E3%82%B5%E3%82%A4%E3%83%90%E3%83%BC%E7%A9%BA%E9%96%93%E3%81%AE%E6%94%BB%E9%98%B2-%E3%83%AD%E3%82%B7%E3%82%A2%E3%81%AE-%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AA%E6%94%BB%E6%92%83-%E3%81%AB%E9%A9%9A%E3%81%8F%E5%A3%B0%E3%82%82-%E3%81%9D%E3%81%AE%E3%83%AF%E3%82%B1%E3%81%AF/ar-AAUUFLU?ocid=msedgntp)
 + [Googleアカウントのプライバシー 行動履歴のダダ漏れ防ぐには](https://www.msn.com/ja-jp/news/techandscience/google%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AE%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC-%E8%A1%8C%E5%8B%95%E5%B1%A5%E6%AD%B4%E3%81%AE%E3%83%80%E3%83%80%E6%BC%8F%E3%82%8C%E9%98%B2%E3%81%90%E3%81%AB%E3%81%AF/ar-AAV1eoz?ocid=msedgntp#page=2)
