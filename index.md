@@ -16,6 +16,10 @@
 + Welcom to Android Studioの画面で[Plugins]をクリック
 + Marketplaceで[Flutter]と[Dart]をインストールする 
 
+### AndroidStudioで既存プロジェクトがエラーとなる場合の対処
++ [Get dependencies]を実行する。
++ PrjExplorerで pubspec.yaml を開き[pub get]を実行。
+ 
 ## < Rust + RaspberryPi >
 
 ## < Eclipse >
