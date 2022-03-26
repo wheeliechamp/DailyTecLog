@@ -27,14 +27,14 @@
     + Current(現Ver) 、Upgradable(UpGrade可能なVer)、Resolvable、Latest(最新Ver β含む) 
 
 ### AndroidStudioで既存プロジェクトがエラーとなる場合の対処
-+ [Get dependencies]を実行する。
-+ PrjExplorerで pubspec.yaml を開き[pub get]を実行。
-+ Project Structure
-    + Project Settings/Project
-        + ProjectSDK が <No SDK> となっているので、選択
-    + Modules
-        + Dependencies ModuleSDK を選択
-+ Error launching application on Android SDK built for x86.
+1. dartファイルを開き、[Get dependencies]を実行する。
+1. PrjExplorerで pubspec.yaml を開き[pub get]を実行。
+   + Project Structure
+       + Project Settings/Project
+           + ProjectSDK が <No SDK> となっているので、選択
+       + Modules
+           + Dependencies ModuleSDK を選択
+1. DerviceManager/Actionsで[WipeData]を実行
 
 ### FlutterでWeｂViewを使う
 + pubspec.yaml に追記し、[Pub get]クリック
@@ -56,6 +56,7 @@ import 'package:webview_flutter/webview_flutter.dart';
       ),
       body: const WebView(
         initialUrl: 'https://yahoo.co.jp',
+        javascriptMode: JavascriptMode.unrestricted,
       ),
 ```
 
