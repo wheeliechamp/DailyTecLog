@@ -16,9 +16,49 @@
 + Welcom to Android Studioの画面で[Plugins]をクリック
 + Marketplaceで[Flutter]と[Dart]をインストールする 
 
+### pubspec.yaml の書き方 (AndroidStudio)
++ 公式
+  + https://dart.dev/tools/pub/dependencies#version-constraints
++ Versionの調べ方
+  + pubspec.yaml を開く 
+  + Packageを記載
+  + [Pub outdated]クリック
+  + 表示内容は下記
+    + Current(現Ver) 、Upgradable(UpGrade可能なVer)、Resolvable、Latest(最新Ver β含む) 
+
 ### AndroidStudioで既存プロジェクトがエラーとなる場合の対処
 + [Get dependencies]を実行する。
 + PrjExplorerで pubspec.yaml を開き[pub get]を実行。
++ Project Structure
+    + Project Settings/Project
+        + ProjectSDK が <No SDK> となっているので、選択
+    + Modules
+        + Dependencies ModuleSDK を選択
++ Error launching application on Android SDK built for x86.
+
+### FlutterでWeｂViewを使う
++ pubspec.yaml に追記し、[Pub get]クリック
+```
+dev_dependencies:
+  webview_flutter: ^3.0.1
+```
++ main.dart に追記
+```
+import 'package:webview_flutter/webview_flutter.dart';
+
+...
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: const WebView(
+        initialUrl: 'https://yahoo.co.jp',
+      ),
+```
+
  
 ## < Rust + RaspberryPi >
 
