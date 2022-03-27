@@ -56,9 +56,15 @@ import 'package:webview_flutter/webview_flutter.dart';
       ),
       body: const WebView(
         initialUrl: 'https://yahoo.co.jp',
+        userAgent: '',
         javascriptMode: JavascriptMode.unrestricted,
       ),
 ```
+
+### Flutter/Dart 仕様
++ future
++ print(), debugPrint()
+
 
  
 ## < Rust + RaspberryPi >
