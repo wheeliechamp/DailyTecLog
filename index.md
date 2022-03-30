@@ -36,7 +36,7 @@
            + Dependencies ModuleSDK を選択
 1. DerviceManager/Actionsで[WipeData]を実行
 
-### FlutterでWeｂViewを使う
+### FlutterでWebViewを使う
 + pubspec.yaml に追記し、[Pub get]クリック
 ```
 dev_dependencies:
@@ -46,8 +46,7 @@ dev_dependencies:
 ```
 import 'package:webview_flutter/webview_flutter.dart';
 
-...
-
+```
   @override
   Widget build(BuildContext context) {
     return Scaffold(
