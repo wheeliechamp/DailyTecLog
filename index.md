@@ -46,7 +46,6 @@ dev_dependencies:
 ```
 import 'package:webview_flutter/webview_flutter.dart';
 
-```
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,12 +58,20 @@ import 'package:webview_flutter/webview_flutter.dart';
         javascriptMode: JavascriptMode.unrestricted,
       ),
 ```
-
+### FlutterでTimer処理（周期実行）
++ 参考：https://api.flutter.dev/flutter/dart-async/Timer/Timer.periodic.html
+```
+Timer.periodic(
+    // 10秒毎に実行
+    Duration(seconds: 10),
+    (timer) {
+      // 実行したいメソッド
+    }
+);
+```
 ### Flutter/Dart 仕様
 + future
 + print(), debugPrint()
-
-
  
 ## < Rust + RaspberryPi >
 
@@ -116,6 +123,10 @@ import 'package:webview_flutter/webview_flutter.dart';
 + pullする 
   + git pull origin develop (developブランチをpullする)
   + git pull のみだと、最新のブランチをpull 
+  + $ git fetch origin master
++ pull で上書きする
+  1. git fetch origin master
+  2. git reset --hard origin/master
 + branch作成 
   + git branch -a (ブランチ一覧をみる) 
   + git checkout develop (ブランチ元に切り替える) 
