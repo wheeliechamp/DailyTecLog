@@ -69,6 +69,16 @@ Timer.periodic(
     }
 );
 ```
+
+### FlutterでWindowsDesktopアプリ作成環境 (2022-04-07)
+1. VisualStudio 2022 をC++によるデスクトップ開発を選択してインストール
+2. コマンドラインで実行
+```
+  > flutter config --enable-windows-desktop
+```
+3. AndroidStudioで[New Flutter Project]を選択
+4. Platformsの[Windows]を選択
+
 ### Flutter/Dart 仕様
 + future
 + print(), debugPrint()
@@ -96,6 +106,9 @@ Timer.periodic(
   + COMMENT ON COLUMN t_nm.column_nm IS 'column_nmという名のカラム'
 + 現在日付：SELECT current_date
 + 現在日時：SELECT noe()
+
+### VSCode
++ [日付ショートカットの設定](https://qiita.com/umyu/items/d9c3875133b8d1c6cb20) (2022-04-07)
 
 ## < 気になった記事やページ >
 + [スマホをノートPC化](https://www.mirabook.info/)
