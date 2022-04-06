@@ -99,6 +99,7 @@ Timer.periodic(
 + SELECT 'Dummy' FROM DUAL; のような利用ができる。
 + Oracle DUAL を PosgreSQL で
   + SELECT 'Dummy'; だけで良い。FROM句なくてもいけるんだ。
+
 ### PostgreSql
 + テーブルにコメント
   + COMMENT ON TABLE t_nm IS 't_nmという名のテーブル'
