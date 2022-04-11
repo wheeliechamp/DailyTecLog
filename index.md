@@ -172,6 +172,9 @@ Timer.periodic(
   + git branch -a でブランチのリスト表示 
 + リモートブランチ削除 
   + git push --delete origin "branch name"
++ git clone で "SSL certificate problem: self signed certificate" エラーとなる
+  + git config --global http.sslVerify false を実行する
+  + [参考](https://qiita.com/yazzy/items/3dae25b3cb8042eed8c2)
 
 
 ```markdown
