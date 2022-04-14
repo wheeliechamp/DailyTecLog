@@ -34,7 +34,7 @@
            + ProjectSDK が <No SDK> となっているので、選択
        + Modules
            + Dependencies ModuleSDK を選択
-1. DerviceManager/Actionsで[WipeData]を実行
+1. DeviceManager/Actionsで[WipeData]を実行
 
 ### FlutterでWebViewを使う
 + pubspec.yaml に追記し、[Pub get]クリック
@@ -78,6 +78,7 @@ Timer.periodic(
 ```
 3. AndroidStudioで[New Flutter Project]を選択
 4. Platformsの[Windows]を選択
+
 ### FlutterでWindowsDesktopアプリをリリースビルドする(2022-04-13)
 1. プロジェクトを作成して
 2. コマンドラインで実行
