@@ -109,9 +109,15 @@ Timer.periodic(
 
 ### PostgreSql
 + テーブルにコメント
-  + COMMENT ON TABLE t_nm IS 't_nmという名のテーブル'
+  + COMMENT ON TABLE t_nm IS 't_nmという名のテーブル';
 + カラムにコメント
-  + COMMENT ON COLUMN t_nm.column_nm IS 'column_nmという名のカラム'
+  + COMMENT ON COLUMN t_nm.column_nm IS 'column_nmという名のカラム';
++ カラム名修正
+  + ALTER TABLE t_nm RENAME COLUMN c_nm_old TO c_nm_new;
++ データ型変更(varchar⇒integer)
+  + ALTER TABLE t_nm ALTER COLUMN c_nm TYPE integer USING "c_nm"::integer;
++ インデックス追加
+  + CREATE INDEX i_c_nm_idx1 ON t_nm (c_nm);
 + 現在日付：SELECT current_date
 + 現在日時：SELECT noe()
 
@@ -182,6 +188,12 @@ Timer.periodic(
 + git clone で "SSL certificate problem: self signed certificate" エラーとなる
   + git config --global http.sslVerify false を実行する
   + [参考](https://qiita.com/yazzy/items/3dae25b3cb8042eed8c2)
++ プロジェクトをgit repository に登録する
+  + git でremote repository を作成し、URLを取得
+  + プロジェクトで git init
+  + git add .
+  + git commit -m "first commit"
+  + git push -u origin master
 
 
 ```markdown
