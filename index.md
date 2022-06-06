@@ -39,7 +39,7 @@
 ### FlutterでWebViewを使う
 + pubspec.yaml に追記し、[Pub get]クリック
 ```
-dev_dependencies:
+dependencies:
   webview_flutter: ^3.0.1
 ```
 + main.dart に追記
@@ -92,6 +92,17 @@ Timer.periodic(
  
 ## < Rust + RaspberryPi >
 
+## <Java >
++ 現在の日付にn日加減算する
+  ```
+  import java.util.*;
+  Calendar curcal = Calendar.getInstance();
+  curcal.add(Calendar.DATE, -30);
+  System.out.println(curcal.get(Calendar.YEAR));
+  System.out.println(curcal.get(Calendar.MONTH));
+  System.out.println(curcal.get(Calendar.DAY));
+  ```
+
 ## < Eclipse >
 + SVNで比較するときに文字化けする。
   + [ウィンドウ]⇒[設定]⇒[一般]⇒[コンテンツタイプ]
@@ -120,6 +131,10 @@ Timer.periodic(
   + CREATE INDEX i_c_nm_idx1 ON t_nm (c_nm);
 + 現在日付：SELECT current_date
 + 現在日時：SELECT noe()
++ 現在日時の 30日後
+  + SELECT now() + CAST('30 days' AS INTERVAL);
++ 現在日時の 1ヶ月後
+  + SELECT now() + CAST('1 months' AS INTERVAL);
 
 ### VSCode
 + [日付ショートカットの設定](https://qiita.com/umyu/items/d9c3875133b8d1c6cb20) (2022-04-07)
