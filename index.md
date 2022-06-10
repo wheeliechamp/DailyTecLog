@@ -86,6 +86,9 @@ Timer.periodic(
   > flutter build windows --release
 ```
 3. build¥windows¥runner¥Release¥"アプリ名".exe が作成される
+
+### Flutter/WebView
+
 ### Flutter/Dart 仕様
 + future
 + print(), debugPrint()
@@ -93,6 +96,11 @@ Timer.periodic(
 ## < Rust + RaspberryPi >
 
 ## <Java >
+
+### JAVA_HOME の確認方法
++ cmd で > echo %JAVA_HOME% を時刻
+
+### Java Code Snippet
 + 現在の日付にn日加減算する
   ```
   import java.util.*;
@@ -102,6 +110,28 @@ Timer.periodic(
   System.out.println(curcal.get(Calendar.MONTH));
   System.out.println(curcal.get(Calendar.DAY));
   ```
+
++ Listをカンマ区切りの文字列にする。Base64Encode
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // Your code here!
+        List<String> aaa = new ArrayList<String>();
+        aaa.add("aaa");
+        aaa.add("bbb");
+        
+        String str = String.join(",", aaa);
+        System.out.println(str);
+        
+        
+        String bbb = Base64.getEncoder().encodeToString("%涼風%".getBytes(StandardCharsets.UTF_8));
+        System.out.println(bbb);
+        
+    }
+}
+```
 
 ## < Eclipse >
 + SVNで比較するときに文字化けする。
@@ -139,6 +169,12 @@ Timer.periodic(
 ### VSCode
 + [日付ショートカットの設定](https://qiita.com/umyu/items/d9c3875133b8d1c6cb20) (2022-04-07)
 
+
+## < Windows >
++ Androidスマホのテザリングが使えないときの対処
+  + デバイスマネージャで、Remote NDIS Compatible Device に！が表示されている
+    + 設定/ネットワークとインターネット/状態/ネットワークのリセット を実行
+ 
 ## < 気になった記事やページ >
 + [スマホをノートPC化](https://www.mirabook.info/)
 + [Python再帰呼び出し](https://atmarkit.itmedia.co.jp/ait/articles/2203/17/news011.html)
