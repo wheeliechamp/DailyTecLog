@@ -133,6 +133,13 @@ public class Main {
 }
 ```
 
++ ListのEmpty、空判定(2022-06-13) 
+```
+  List<String> tmp = new ArrayList<String>();
+  tmp.add("AAA");
+  System.out.println(tmp.isEmpty());
+```
+
 ## < Eclipse >
 + SVNで比較するときに文字化けする。
   + [ウィンドウ]⇒[設定]⇒[一般]⇒[コンテンツタイプ]
@@ -165,6 +172,12 @@ public class Main {
   + SELECT now() + CAST('30 days' AS INTERVAL);
 + 現在日時の 1ヶ月後
   + SELECT now() + CAST('1 months' AS INTERVAL);
+
+### Docker
++ コマンド
+  + docker ps     実行中コンテナを一覧表示
+  + docker ps -a  停止中も含めて一覧表示
+  + docker restart container_name コンテナ再起動
 
 ### VSCode
 + [日付ショートカットの設定](https://qiita.com/umyu/items/d9c3875133b8d1c6cb20) (2022-04-07)
