@@ -182,6 +182,9 @@ public class Main {
 ### VSCode
 + [日付ショートカットの設定](https://qiita.com/umyu/items/d9c3875133b8d1c6cb20) (2022-04-07)
 
+### Slack
++ リマインダー設定
+  + メッセージフィールドで、/remind [@someone or #channel] でできる。
 
 ## < Windows >
 + Androidスマホのテザリングが使えないときの対処
