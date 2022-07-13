@@ -98,9 +98,24 @@ Timer.periodic(
 ## <Java >
 
 ### JAVA_HOME の確認方法
-+ cmd で > echo %JAVA_HOME% を時刻
++ cmd で > echo %JAVA_HOME% を実行
 
 ### Java Code Snippet
++ 年月文字列から月初日、月末日の文字列を取得する
+  ```
+  import java.time.LocalDateTime;
+  import java.time.format.DateTimeFormatter;
+ 
+    String dt = "2020-06";
+    LocalDateTime firstDay = LocalDateTime.of(
+      Integer.parseInt(dt.split("-")[0]),
+      Integer.parseInt(dt.split("-")[1]), 1, 0, 0);
+    LocalDateTime lastDay = firstDay.plusMonths(1).plusDays(-1);
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    System.out.println(firstDay.format(dtf));
+    System.out.println(lastDay.format(dtf));
+  ```
+
 + 現在の日付にn日加減算する
   ```
   import java.util.*;
