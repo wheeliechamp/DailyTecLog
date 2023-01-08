@@ -1,5 +1,7 @@
 # 情報技術の知見に関する履歴
 
+### [ChromOS Flex](./index.md)
+
 ## < kotkin + Android >
 ## < Flutter >
 ### 公式
