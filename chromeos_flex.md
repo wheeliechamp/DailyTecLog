@@ -14,3 +14,4 @@
   1. Dockerfile 拡張子なしでファイルを作成
   1. ディレクトリに格納し、ターミナルでディレクトリに移動
   1. sudo docker build -t kindle_img ./ を実行
++ [xhost](https://kledgeb.blogspot.com/2012/09/ubuntu-x-2.html) 
