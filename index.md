@@ -36,12 +36,12 @@
            + ProjectSDK が <No SDK> となっているので、選択
        + Modules
            + Dependencies ModuleSDK を選択
-1. DerviceManager/Actionsで[WipeData]を実行
+1. DeviceManager/Actionsで[WipeData]を実行
 
 ### FlutterでWebViewを使う
 + pubspec.yaml に追記し、[Pub get]クリック
 ```
-dev_dependencies:
+dependencies:
   webview_flutter: ^3.0.1
 ```
 + main.dart に追記
@@ -81,11 +81,81 @@ Timer.periodic(
 3. AndroidStudioで[New Flutter Project]を選択
 4. Platformsの[Windows]を選択
 
+### FlutterでWindowsDesktopアプリをリリースビルドする(2022-04-13)
+1. プロジェクトを作成して
+2. コマンドラインで実行
+```
+  > flutter build windows --release
+```
+3. build¥windows¥runner¥Release¥"アプリ名".exe が作成される
+
+### Flutter/WebView
+
 ### Flutter/Dart 仕様
 + future
 + print(), debugPrint()
  
 ## < Rust + RaspberryPi >
+
+## <Java >
+
+### JAVA_HOME の確認方法
++ cmd で > echo %JAVA_HOME% を実行
+
+### Java Code Snippet
++ 年月文字列から月初日、月末日の文字列を取得する
+  ```
+  import java.time.LocalDateTime;
+  import java.time.format.DateTimeFormatter;
+ 
+    String dt = "2020-06";
+    LocalDateTime firstDay = LocalDateTime.of(
+      Integer.parseInt(dt.split("-")[0]),
+      Integer.parseInt(dt.split("-")[1]), 1, 0, 0);
+    LocalDateTime lastDay = firstDay.plusMonths(1).plusDays(-1);
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    System.out.println(firstDay.format(dtf));
+    System.out.println(lastDay.format(dtf));
+  ```
+
++ 現在の日付にn日加減算する
+  ```
+  import java.util.*;
+  Calendar curcal = Calendar.getInstance();
+  curcal.add(Calendar.DATE, -30);
+  System.out.println(curcal.get(Calendar.YEAR));
+  System.out.println(curcal.get(Calendar.MONTH));
+  System.out.println(curcal.get(Calendar.DAY));
+  ```
+
++ Listをカンマ区切りの文字列にする。Base64Encode
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // Your code here!
+        List<String> aaa = new ArrayList<String>();
+        aaa.add("aaa");
+        aaa.add("bbb");
+        
+        String str = String.join(",", aaa);
+        System.out.println(str);
+        
+        
+        String bbb = Base64.getEncoder().encodeToString("%涼風%".getBytes(StandardCharsets.UTF_8));
+        System.out.println(bbb);
+        
+    }
+}
+```
+
++ ListのEmpty、空判定(2022-06-13) 
+```
+  List<String> tmp = new ArrayList<String>();
+  tmp.add("AAA");
+  System.out.println(tmp.isEmpty());
+```
 
 ## < Eclipse >
 + SVNで比較するときに文字化けする。
@@ -104,15 +174,40 @@ Timer.periodic(
 
 ### PostgreSql
 + テーブルにコメント
-  + COMMENT ON TABLE t_nm IS 't_nmという名のテーブル'
+  + COMMENT ON TABLE t_nm IS 't_nmという名のテーブル';
 + カラムにコメント
-  + COMMENT ON COLUMN t_nm.column_nm IS 'column_nmという名のカラム'
+  + COMMENT ON COLUMN t_nm.column_nm IS 'column_nmという名のカラム';
++ カラム名修正
+  + ALTER TABLE t_nm RENAME COLUMN c_nm_old TO c_nm_new;
++ データ型変更(varchar⇒integer)
+  + ALTER TABLE t_nm ALTER COLUMN c_nm TYPE integer USING "c_nm"::integer;
++ インデックス追加
+  + CREATE INDEX i_c_nm_idx1 ON t_nm (c_nm);
 + 現在日付：SELECT current_date
 + 現在日時：SELECT noe()
++ 現在日時の 30日後
+  + SELECT now() + CAST('30 days' AS INTERVAL);
++ 現在日時の 1ヶ月後
+  + SELECT now() + CAST('1 months' AS INTERVAL);
+
+### Docker
++ コマンド
+  + docker ps     実行中コンテナを一覧表示
+  + docker ps -a  停止中も含めて一覧表示
+  + docker restart container_name コンテナ再起動
 
 ### VSCode
 + [日付ショートカットの設定](https://qiita.com/umyu/items/d9c3875133b8d1c6cb20) (2022-04-07)
 
+### Slack
++ リマインダー設定
+  + メッセージフィールドで、/remind [@someone or #channel] でできる。
+
+## < Windows >
++ Androidスマホのテザリングが使えないときの対処
+  + デバイスマネージャで、Remote NDIS Compatible Device に！が表示されている
+    + 設定/ネットワークとインターネット/状態/ネットワークのリセット を実行
+ 
 ## < 気になった記事やページ >
 + [スマホをノートPC化](https://www.mirabook.info/)
 + [Python再帰呼び出し](https://atmarkit.itmedia.co.jp/ait/articles/2203/17/news011.html)
@@ -174,6 +269,15 @@ Timer.periodic(
   + git branch -a でブランチのリスト表示 
 + リモートブランチ削除 
   + git push --delete origin "branch name"
++ git clone で "SSL certificate problem: self signed certificate" エラーとなる
+  + git config --global http.sslVerify false を実行する
+  + [参考](https://qiita.com/yazzy/items/3dae25b3cb8042eed8c2)
++ プロジェクトをgit repository に登録する
+  + git でremote repository を作成し、URLを取得
+  + プロジェクトで git init
+  + git add .
+  + git commit -m "first commit"
+  + git push -u origin master
 
 
 ```markdown
