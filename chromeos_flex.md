@@ -11,11 +11,17 @@
 + [ChromeOS Flex ショートカットキー](https://4thsight.xyz/41777)
 + [Flutter開発環境構築](http://pineplanter.moo.jp/non-it-salaryman/2022/02/07/chromebook-flutter/)
 + [Kindleで本を読む](https://zenn.dev/junkawa/articles/chromeosflex_install_kindleforpc#crostini-%E7%92%B0%E5%A2%83)
+  + 補足
   1. [Wineを設定](https://wiki.winehq.org/Ubuntu)
-    + Preparation を実行
-    + Add the repository を実行
+      + Preparation を実行
+      + Add the repository を実行
   1. Dockerfile 拡張子なしでファイルを作成
-    + wget 〜 winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key のPathをWine設定で置き換える
+      + wget 〜 winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key のPathをWine設定で置き換える
   1. ディレクトリに格納し、ターミナルでディレクトリに移動
   1. sudo docker build -t kindle_img ./ を実行
+  1. 現在のユーザをDockerグループに追加
+      + whoamiで確認
+      + sudo gpasswd -a user docker で追加
+  1. docker_kindle でコンテナ起動
+  1. フォントインストール
 + [xhost](https://kledgeb.blogspot.com/2012/09/ubuntu-x-2.html) 
