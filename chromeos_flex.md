@@ -24,4 +24,7 @@
       + sudo gpasswd -a user docker で追加
   1. docker_kindle でコンテナ起動
   1. フォントインストール
++ [Wineインストール](https://pc.watch.impress.co.jp/docs/column/nishikawa/1442374.html)
++ [Ubuntu で Wine7 を使って Kindle を読む](https://qiita.com/nanbuwks/items/a8f3b558cae92e5576bf)
++ [Ubuntu 21.10にKindleをインストール](https://qiita.com/relu/items/8fc87a895e17609012aa)
 + [xhost](https://kledgeb.blogspot.com/2012/09/ubuntu-x-2.html) 
