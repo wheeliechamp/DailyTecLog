@@ -14,9 +14,12 @@
   + 補足
   1. [Wineを設定](https://wiki.winehq.org/Debian)
       + Preparation を実行
+        + $ sudo dpkg --add-architecture i386 
       + Add the repository を実行
+        + $ sudo mkdir -pm755 /etc/apt/keyrings
+        + $ sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
   1. Dockerfile 拡張子なしでファイルを作成
-      + wget 〜 winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key のPathをWine設定で置き換える
+      + wget 〜 winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key のPathをWine設定(/etc/apt/keyrings)で置き換える
   1. ディレクトリに格納し、ターミナルでディレクトリに移動
   1. sudo docker build -t kindle_img ./ を実行
   1. 現在のユーザをDockerグループに追加
