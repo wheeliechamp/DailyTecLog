@@ -23,8 +23,9 @@
   1. ディレクトリに格納し、ターミナルでディレクトリに移動
   1. sudo docker build -t kindle_img ./ を実行
   1. 現在のユーザをDockerグループに追加
+      + [Linuxでグループ確認](https://kazmax.zpp.jp/linux_beginner/etc_group.html)
       + whoamiで確認
-      + sudo gpasswd -a user docker で追加
+      + $ sudo gpasswd -a user docker で追加
   1. docker_kindle でコンテナ起動
   1. フォントインストール
 + [Wineインストール](https://pc.watch.impress.co.jp/docs/column/nishikawa/1442374.html)
