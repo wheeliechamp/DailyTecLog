@@ -9,6 +9,7 @@
 
 ### < 参考 >
 + [ChromeOS Flex ショートカットキー](https://4thsight.xyz/41777)
++ [Flutterインストール](https://docs.flutter.dev/get-started/install/chromeos)
 + [Flutter開発環境構築](http://pineplanter.moo.jp/non-it-salaryman/2022/02/07/chromebook-flutter/)
 + [Kindleで本を読む](https://zenn.dev/junkawa/articles/chromeosflex_install_kindleforpc#crostini-%E7%92%B0%E5%A2%83)
   + 補足
