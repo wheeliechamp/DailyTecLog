@@ -69,6 +69,21 @@ Timer.periodic(
 );
 ```
 
+### FlutterでiOSアプリ開発
+1. 参考
+  + https://4qualia.co.jp/technology/solution_business/20220506140446.html
+  + https://dev.classmethod.jp/articles/debugging-flutter-app-on-iphone-device-connected-to-macbook/
+  + https://zenn.dev/nnabeyang/scraps/62cea9e93a4409
+  + https://qiita.com/tocomi/items/34949d64de9677c1e697
+  + https://softmoco.com/devenv/how-to-create-ios-app-id.php
+  + https://zenn.dev/sukedon/articles/0ec92289f4141a
+2. メモ
+```
+macでiPhoneシミュレータ起動
+$ open -a simulator
+```
+
+
 ### FlutterでWindowsDesktopアプリ作成環境 (2022-04-07)
 1. VisualStudio 2022 をC++によるデスクトップ開発を選択してインストール
 2. コマンドラインで実行
